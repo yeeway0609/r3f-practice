@@ -1,3 +1,5 @@
+Course: https://threejs-journey.com
+
 ## 55. First R3F Application
 
 - We didn't have to create a Scene
