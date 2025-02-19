@@ -2,10 +2,9 @@ import ReactDOM from "react-dom/client";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import "./style.css";
-import App from "./component/App";
-import Drei from "./component/Drei";
-import Test from "./component/Test";
-import MouseEvent from "./component/MouseEvent";
+import App from "./component/55-App";
+import Drei from "./component/56-Drei";
+import MouseEvent from "./component/62-MouseEvent";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 

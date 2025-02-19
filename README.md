@@ -11,7 +11,7 @@ Course: https://threejs-journey.com
 - We didn't have to import the Mesh, nor the SphereGeometry, nor the MeshNormalMaterial
 - We don't even have to reload the page (most of the time)
 
-```javascript
+```js
 const mesh = new THREE.Mesh();
 mesh.position.set(1, 2, 3);
 mesh.rotation.x = 0.5;
