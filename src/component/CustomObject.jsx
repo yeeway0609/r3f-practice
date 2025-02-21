@@ -1,28 +1,28 @@
-import { useEffect, useMemo, useRef } from "react";
-import * as THREE from "three";
+import { useEffect, useMemo, useRef } from "react"
+import * as THREE from "three"
 
-const triangleCount = 10;
-const verticesCount = triangleCount * 3; // 每個三角形有 3 個頂點
-const positionsCount = verticesCount * 3; // 每個頂點有 3 個xyz座標
+const triangleCount = 10
+const verticesCount = triangleCount * 3 // 每個三角形有 3 個頂點
+const positionsCount = verticesCount * 3 // 每個頂點有 3 個xyz座標
 
 export default function CustomObject() {
-  const geoRef = useRef();
+  const geoRef = useRef()
 
   useEffect(() => {
     if (geoRef.current) {
-      geoRef.current.computeVertexNormals();
+      geoRef.current.computeVertexNormals()
     }
-  }, []);
+  }, [])
 
   const positions = useMemo(() => {
-    const positions = new Float32Array(positionsCount);
+    const positions = new Float32Array(positionsCount)
 
     for (let i = 0; i < positionsCount; i++) {
-      positions[i] = (Math.random() - 0.5) * 3;
+      positions[i] = (Math.random() - 0.5) * 3
     }
 
-    return positions;
-  }, []);
+    return positions
+  }, [])
 
   return (
     <mesh position-y={2}>
@@ -31,5 +31,5 @@ export default function CustomObject() {
       </bufferGeometry>
       <meshStandardMaterial color="red" side={THREE.DoubleSide} />
     </mesh>
-  );
+  )
 }
